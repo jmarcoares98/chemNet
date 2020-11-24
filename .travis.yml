@@ -3,39 +3,9 @@
 language: r
 sudo: required
 cache: packages
-
-os:
-  - linux
-  - osx
-
-r:
-  - release
-  - devel
-  
-matrix:
-  exclude:
-    - r: devel
-      os: osx
-
-env:
-  global:
-    - _R_CHECK_FORCE_SUGGESTS_=FALSE
-    - ASAN="-fsanitize=address -fno-omit-frame-pointer"
-    - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-    - HDF5_VERSION=1.8.17
-    - HDF5_RELEASE_URL="https://support.hdfgroup.org/ftp/HDF5/releases"
-
-addons:
-  apt:
-    packages:
-      - subversion
-      - autoconf
-      - build-essential
-      - libtool
-      - libmagick++-dev
-  homebrew:
-    packages:
-      - libgit2
-
+      
 script:
+  - ssh jmrares@delta-topology.org
+  - ssh dtuser@stampede2.tacc.utexas.edu
+  - cd /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2
   - ./runChem.sh
