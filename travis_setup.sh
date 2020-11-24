@@ -7,5 +7,4 @@ if [ "$TRAVIS_OS_NAME" != "osx" ]; then #
   cd "hdf5-$HDF5_VERSION"
   CFLAGS="-w" ./configure --quiet --prefix=/usr/local
   sudo CFLAGS="-w" make --quiet install
-  cd ../seurat
 fi
