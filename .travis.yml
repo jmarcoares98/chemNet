@@ -8,4 +8,4 @@
        - libgsl0-dev # for topicmodels
        - libxml2-dev # for XML, a dependency of quanteda
 script:
-  ./runChem.sh
+  - ./runChem.sh
