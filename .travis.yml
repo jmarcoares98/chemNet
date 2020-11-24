@@ -3,7 +3,5 @@
 language: bash 
 os: windows
 script:
-  - ssh jmrares@delta-topology.org
-  - ssh dtuser@stampede2.tacc.utexas.edu
-  - cd /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2
   - ./runChem.sh
+  - ./launcherC.slurm
