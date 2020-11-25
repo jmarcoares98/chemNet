@@ -3,5 +3,5 @@
 language: bash 
 os: windows
 script:
-  - ./runChem.sh
-  - ./launcherC.slurm
+  - srun ./runChem.sh
+  - srun ./launcherC.slurm
