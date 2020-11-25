@@ -14,7 +14,7 @@ TESTNUM="1"
 WATERNUM="4"
 DIR=${SLURM_JOBID}/test$TESTNUM.$WATERNUM
 
-mkdir /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/${SLURM_JOBID}
+mkdir /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs${SLURM_JOBID}
 
 mkdir /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
 
