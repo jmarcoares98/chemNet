@@ -14,13 +14,13 @@ TESTNUM="1"
 WATERNUM="4"
 DIR=${SLURM_JOBID}/test$TESTNUM.$WATERNUM
 
-mkdir /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs${SLURM_JOBID}
+mkdir test-jobs${SLURM_JOBID}
 
-mkdir /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
+mkdir test-jobs/$DIR
 
-cd /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/test$TESTNUM
+cd test-jobs/test$TESTNUM
 
-cp Input-test$TESTNUM /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
+cp Input-test$TESTNUM ChemNetworks-2-2/test-jobs/$DIR
 
 case $TESTNUM in
 	1)ARGS="wat$WATERNUM.xyz" ;;
@@ -35,7 +35,7 @@ cd /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
 
 echo "testing test1 for $ARGS from $DIR"
 
-time /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/ChemNetworks-2.2.exe Input-test1 $ARGS
+time ChemNetworks-2.2.exe Input-test1 $ARGS
 lab=$?
 
 echo "here"
