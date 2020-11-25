@@ -3,7 +3,5 @@
 language: bash 
 os: windows
 script:
-  - ssh jmrares@delta-topology.org
-  - ssh dtuser@stampede2.tacc.utexas.edu
   - ./runChem.sh
   - ./launcherC.slurm
