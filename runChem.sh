@@ -14,13 +14,13 @@ TESTNUM="1"
 WATERNUM="4"
 DIR=${SLURM_JOBID}/test$TESTNUM.$WATERNUM
 
-mkdir test-jobs${SLURM_JOBID}
+mkdir /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/${SLURM_JOBID}
 
-mkdir test-jobs/$DIR
+mkdir /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
 
-cd test-jobs/test$TESTNUM
+cd /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/test$TESTNUM
 
-cp Input-test$TESTNUM ChemNetworks-2-2/test-jobs/$DIR
+cp Input-test$TESTNUM /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
 
 case $TESTNUM in
 	1)ARGS="wat$WATERNUM.xyz" ;;
@@ -30,12 +30,12 @@ case $TESTNUM in
 
 esac
 
-cp $ARGS test-jobs/$DIR
-cd test-jobs/$DIR
+cp $ARGS /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
+cd /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
 
 echo "testing test1 for $ARGS from $DIR"
 
-time ChemNetworks-2.2.exe Input-test1 $ARGS
+time /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/ChemNetworks-2.2.exe Input-test1 $ARGS
 lab=$?
 
 echo "here"
