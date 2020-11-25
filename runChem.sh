@@ -30,8 +30,8 @@ case $TESTNUM in
 
 esac
 
-cp $ARGS /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
-cd /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/$DIR
+cp $ARGS test-jobs/$DIR
+cd test-jobs/$DIR
 
 echo "testing test1 for $ARGS from $DIR"
 
