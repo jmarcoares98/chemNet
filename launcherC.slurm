@@ -26,7 +26,7 @@
 
 module load launcher
 
-mkdir test-jobs/${SLURM_JOBID}
+mkdir /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/${SLURM_JOBID}
 
 for task in 1 2 3 4
 do
@@ -34,11 +34,11 @@ do
 for index in {1..4}
 do
 
-mkdir test-jobs/${SLURM_JOBID}/$task.${index}
+mkdir /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/${SLURM_JOBID}/$task.${index}
 
-cd test-jobs/test$task
+cd /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/test$task
 
-cp test-jobs/${SLURM_JOBID}/$task.${index}
+cp Input-test$task /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/${SLURM_JOBID}/$task.${index}
 
 case $task in
         1)ARGS="wat${index}.xyz" ;;
@@ -48,13 +48,13 @@ case $task in
 
 esac
 
-cp $ARGS test-jobs/${SLURM_JOBID}/$task.${index}
+cp $ARGS /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/${SLURM_JOBID}/$task.${index}
 
-cd test-jobs/${SLURM_JOBID}/$task.${index}
+cd /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/test-jobs/${SLURM_JOBID}/$task.${index}
 
 echo "running test $task.${index} for $ARGS"
 
-time ChemNetworks-2.2.exe Input-test$task $ARGS &
+time /home1/07020/dtuser/work/capstone/Kate/All/ChemNetworks-2-2/ChemNetworks-2.2.exe Input-test$task $ARGS &
 PIDS+=($!)
 
 done
@@ -80,4 +80,3 @@ for st in ${STATUS[@]}; do
 done
 
 exit
-
